@@ -1,0 +1,19 @@
+package programming.exercise1;
+
+import java.util.List;
+
+public class PrintSquareOfEvenNumbers {
+
+    public static void main(String[] args) {
+        List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
+
+        printSquareOfEvenNumbers(numbers);
+    }
+
+    private static void printSquareOfEvenNumbers(List<Integer> numbers) {
+        numbers.stream()
+                .filter(number -> number % 2 == 0)
+                .map(number -> number * number)
+                .forEach(System.out::println);
+    }
+}
