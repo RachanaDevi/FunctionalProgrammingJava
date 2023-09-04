@@ -24,7 +24,7 @@ public class FP01Exercises {
         // create a stream of numbers
         numbers.stream()
                 // filter if the number is even or not
-                .filter(FP01Exercises::isEven) // Method reference, this is a number to be called in each numbers
+                .filter(number -> number % 2 == 0) // Use lambda expression
                 // we don't want it to immediately execute, so we pass method reference
                 .forEach(System.out::println); // Method reference
     }
