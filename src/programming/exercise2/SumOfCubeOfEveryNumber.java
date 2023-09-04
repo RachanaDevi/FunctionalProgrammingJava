@@ -2,10 +2,11 @@ package programming.exercise2;
 
 import java.util.List;
 
+import static programming.common.Inputs.numbers;
+
 public class SumOfCubeOfEveryNumber {
 
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
 
         System.out.println("Sum : " + sumOfCubeOf(numbers));
     }
