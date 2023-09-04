@@ -14,11 +14,7 @@ public class FP01Exercises {
         // create a stream of numbers
         numbers.stream()
                 // we don't want it to immediately execute, so we pass method reference
-                .forEach(FP01Exercises::print); // Method reference
-    }
-
-    private static void print(int number){
-        System.out.println(number);
+                .forEach(System.out::println); // Method reference
     }
 
     private static void printAllNumbersInStructured(List<Integer> numbers) {
