@@ -2,12 +2,12 @@ package programming.exercise1;
 
 import java.util.List;
 
-import static programming.common.Inputs.courses;
+import static programming.common.Inputs.coursesNames;
 
 public class PrintCharactersOfEachCourse {
 
     public static void main(String[] args) {
-        printAllCourseCharacters(courses);
+        printAllCourseCharacters(coursesNames);
     }
 
     private static void printAllCourseCharacters(List<String> courses) {

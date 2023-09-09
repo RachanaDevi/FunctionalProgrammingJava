@@ -3,12 +3,12 @@ package programming.exercise2;
 import java.util.Comparator;
 import java.util.List;
 
-import static programming.common.Inputs.courses;
+import static programming.common.Inputs.coursesNames;
 
 public class SortingCoursesAccordingToTheirLength {
 
     public static void main(String[] args) {
-        getAllCoursesSortedAccordingToTheirLength(courses);
+        getAllCoursesSortedAccordingToTheirLength(coursesNames);
     }
 
     private static void getAllCoursesSortedAccordingToTheirLength(List<String> courses) {
