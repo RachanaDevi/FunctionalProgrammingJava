@@ -3,6 +3,7 @@ package programming.exercise3;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 import static programming.common.Inputs.numbers;
 
@@ -36,6 +37,14 @@ public class FP03HandsOn {
             @Override
             public void accept(Integer integer) {
                 System.out.println(integer);
+            }
+        };
+
+        Supplier<Integer> randomNumber = () -> 2;
+        Supplier<Integer> randomNumber2 = new Supplier<Integer>() {
+            @Override
+            public Integer get() {
+                return 2;
             }
         };
 
