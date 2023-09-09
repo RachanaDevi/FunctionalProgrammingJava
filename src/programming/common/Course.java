@@ -4,6 +4,6 @@ public record Course(String name, String category, int reviewScore, int noOfStud
 
     @Override
     public String toString() {
-        return "Course :" + name + ':' + category + ":" + " reviewScore :" + reviewScore + "noOfStudents :" + noOfStudents;
+        return "Course :" + name + " : " + category + ":" + " reviewScore : " + reviewScore + " noOfStudents :" + noOfStudents;
     }
 }
