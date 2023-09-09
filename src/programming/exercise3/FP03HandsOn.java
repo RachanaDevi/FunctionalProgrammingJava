@@ -1,5 +1,6 @@
 package programming.exercise3;
 
+import java.util.Random;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -40,7 +41,10 @@ public class FP03HandsOn {
             }
         };
 
-        Supplier<Integer> randomNumber = () -> 2;
+        Supplier<Integer> randomNumber = () -> {
+            Random random = new Random();
+            return random.nextInt(100);
+        };
         Supplier<Integer> randomNumber2 = new Supplier<Integer>() {
             @Override
             public Integer get() {
