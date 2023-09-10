@@ -1,6 +1,10 @@
 package programming.exercise5;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 public class IntStreamsExercise {
 
@@ -15,9 +19,13 @@ public class IntStreamsExercise {
 
 
         // this an infinite stream so you will have to limit it
-        IntStream.iterate(1, e -> e + 2).peek(System.out::println).sum();
+//        IntStream.iterate(1, number -> number + 2).peek(System.out::println).sum();
 
         // limit it
-        IntStream.iterate(1, e -> e + 2).limit(10).peek(System.out::println).sum();
+        IntStream.iterate(1, number -> number + 2).limit(10).peek(System.out::println).sum();
+
+        // Use boxed for creating it toList()
+        List<Integer> collectedBoxedIntStream = IntStream.iterate(1, number -> number + 2).limit(10).boxed().collect(Collectors.toList());
+        System.out.println("List:" + collectedBoxedIntStream);
     }
 }
