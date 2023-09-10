@@ -18,11 +18,5 @@ public class MaxMinFindFirstOrAny {
         System.out.println(courses.stream().findFirst().get());
         System.out.println(courses.stream().findAny().get());
 
-
-        // find max no of students
-        System.out.println(courses.stream().filter(course -> course.reviewScore() > 95)
-                .mapToInt(Course::noOfStudents)
-                .max());
-
     }
 }
